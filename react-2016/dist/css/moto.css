@@ -1,0 +1,41 @@
+
+body {
+    background-image: url('../Images/img3.jpg');
+    background-size: cover;
+}
+
+.like-icon {
+    font-size: 20px;
+}
+
+.comment-icon {
+	float: left;
+	opacity: 0.8;
+
+}
+
+
+.image-frame {
+	width: 350px;
+	height: 195px;
+	margin-bottom: 15px;
+}
+
+.comment-panel {
+	margin-top: 40px;
+	display: none;
+}
+
+.img-rounded {
+	box-shadow: 3px 3px 2px 0px rgba(50, 50, 50, 0.75);
+}
+
+.photo-img {
+    max-height:400px;
+    height: 100%;
+}
+
+.like-label {
+    font-size: 20px;
+    padding-left: 5px;
+}
