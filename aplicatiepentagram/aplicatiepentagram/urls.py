@@ -18,12 +18,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.views.generic.base import TemplateView
-from rest_framework.authtoken import views as authtoken_views
-from Pentagram.views import like
+from Pentagram.views import like, CustomObtainAuthToken
 
 
 urlpatterns = [
-    url(r'^api/v1/login/$', authtoken_views.obtain_auth_token),
+    url(r'^api/v1/login/$', CustomObtainAuthToken.as_view()),
     url(r'^api/v1/users/$', 'Pentagram.views.users', name='users'),
     url(r'^api/v1/photos/$', 'Pentagram.views.photos', name='photos'),
     url(r'^api/v1/photos/(?P<id_photo>[0-9]*)/comments/$', 'Pentagram.views.comments', name='comments'),

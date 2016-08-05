@@ -16,7 +16,7 @@ class Photo(models.Model):
 class Comment(models.Model):
     user = models.ForeignKey(User)
     photo_id = models.ForeignKey(Photo)
-    comment = models.CharField(max_length=50)
+    comment = models.TextField()
 
 class Like(models.Model):
     user = models.ForeignKey(User)
